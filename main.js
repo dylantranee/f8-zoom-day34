@@ -1,0 +1,54 @@
+function Counter() {
+	const [count, setCount] = React.useState(0)
+
+	return (
+		<>
+			<p className={`
+				count
+				${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
+			`}>
+				{count}
+			</p>
+
+			<p className={`
+				status
+				${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
+			`}>
+				{count > 0 ? 'Positive' : count < 0 ? 'Negative' : 'Zero'}
+			</p>
+
+			<button
+				className="btn btn--increase"
+				onClick={() => setCount(count + 1)}
+			>
+				Increase
+			</button >
+
+			<button
+				className="btn btn--decrease"
+				onClick={() => setCount(count - 1)}
+			>
+				Decrease
+			</button>
+
+			<button
+				className="btn btn--reset"
+				onClick={() => setCount(0)}
+			>
+				Reset
+			</button>
+		</>
+	)
+}
+
+const app = (
+	<>
+		<div className="container">
+			<h1 className="site-title">Counter App</h1>
+			<Counter />
+		</div>
+	</>
+)
+
+const root = ReactDOM.createRoot(document.querySelector("#root"))
+root.render(app)
