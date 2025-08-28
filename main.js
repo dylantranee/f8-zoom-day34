@@ -3,51 +3,47 @@ function Counter() {
 
 	return (
 		<>
-			<h1 className="site-title">Counter App</h1>
-			<p className={`
-				count
-				${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
-			`}>
-				{count}
-			</p>
-
-			<p className={`
-				status
-				${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
-			`}>
-				{count > 0 ? 'Positive' : count < 0 ? 'Negative' : 'Zero'}
-			</p>
-
-			<button
-				className="btn btn--increase"
-				onClick={() => setCount(count + 1)}
-			>
-				Increase
-			</button >
-
-			<button
-				className="btn btn--decrease"
-				onClick={() => setCount(count - 1)}
-			>
-				Decrease
-			</button>
-
-			<button
-				className="btn btn--reset"
-				onClick={() => setCount(0)}
-			>
-				Reset
-			</button>
+			<main>
+				<div class="container">
+					<h1 className="site-title">Counter App</h1>
+					<p className={`
+						count
+						${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
+					`}>
+						{count}
+					</p>
+					<p className={`
+						status
+						${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
+					`}>
+						{count > 0 ? 'Positive' : count < 0 ? 'Negative' : 'Zero'}
+					</p>
+					<button
+						className="btn btn--increase"
+						onClick={() => setCount(count + 1)}
+					>
+						Increase
+					</button >
+					<button
+						className="btn btn--decrease"
+						onClick={() => setCount(count - 1)}
+					>
+						Decrease
+					</button>
+					<button
+						className="btn btn--reset"
+						onClick={() => setCount(0)}
+					>
+						Reset
+					</button>
+				</div>
+			</main>
 		</>
 	)
 }
 
 const app = (
-	<>
-		<div className="container">
-			<Counter />
-		</div>
-	</>
+	<Counter />
 )
 
 const root = ReactDOM.createRoot(document.querySelector("#root"))
