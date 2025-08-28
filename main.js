@@ -3,6 +3,7 @@ function Counter() {
 
 	return (
 		<>
+			<h1 className="site-title">Counter App</h1>
 			<p className={`
 				count
 				${count > 0 ? 'positive' : count < 0 ? 'negative' : 'zero'}
@@ -44,7 +45,6 @@ function Counter() {
 const app = (
 	<>
 		<div className="container">
-			<h1 className="site-title">Counter App</h1>
 			<Counter />
 		</div>
 	</>
