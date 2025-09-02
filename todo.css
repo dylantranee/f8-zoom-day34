@@ -1,0 +1,79 @@
+/* ==========
+Typography
+========== */
+
+.input-text {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5em 0.75em;
+  border: 1px solid oklch(70.4% 0.04 256.788);
+  border-radius: 5px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn--add {
+  background-color: oklch(88.2% 0.059 254.128);
+  color: oklch(37.9% 0.146 265.522);
+  margin-left: 1rem;
+}
+
+.btn--delete {
+  background-color: oklch(88.5% 0.062 18.334);
+  color: oklch(39.6% 0.141 25.723);
+  margin-left: auto;
+}
+
+input[type="checkbox"] {
+  accent-color: oklch(62.3% 0.214 259.815);
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.accent-text {
+  font-weight: 600;
+}
+
+/* ==========
+Layout
+========== */
+
+.form {
+  margin-bottom: 1rem;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.no-tasks {
+  margin: 1.5rem 0 0;
+  font-weight: 400;
+  font-style: italic;
+}

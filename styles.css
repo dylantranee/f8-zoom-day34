@@ -5,97 +5,31 @@ Global styles
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
-
-/* ==========
-Typography
-========== */
-
-.count {
-	font-size: 2rem;
-	font-weight: 700;
-}
-
-.status {
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin: 0.5rem 0 1.5rem;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-}
-
-/* Buttons */
-
-.btn {
-	font: inherit;
-	font-weight: 600;
-	padding: .5rem 1.5rem;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: transform 250ms;
-}
-
-.btn:hover,
-.btn:focus {
-	transform: scale(1.05);
-}
-
-.btn + .btn {
-	margin-left: 1rem;
-}
-
-.btn--increase {
-	background-color: oklch(87.1% 0.15 154.449);
-	color: oklch(39.3% 0.095 152.535);
-}
-.btn--decrease {
-	background-color: oklch(88.5% 0.062 18.334);
-	color: oklch(39.6% 0.141 25.723);
-}
-.btn--reset {
-	background-color: oklch(92.9% 0.013 255.508);
-	color: oklch(20.8% 0.042 265.755);
-}
-
-/* ==========
-Layout
-========== */
 
 main {
-	display: flex;
-	align-items: center;
-	height: 100vh;
-	background-color: oklch(98.4% 0.003 247.858);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: oklch(98.4% 0.003 247.858);
 }
 
 .container {
-	margin: 0 auto;
-	text-align: center;
-	padding: 2em;
-	border-radius: 10px;
-	box-shadow: 1px 1px 10px oklch(86.9% 0.022 252.894);
-	background-color: oklch(98.4% 0.003 247.858);
-}
-
-.positive {
-	color: oklch(72.3% 0.219 149.579);
-}
-
-.negative {
-	color: oklch(63.7% 0.237 25.331);
-}
-
-.zero {
-	color: oklch(55.4% 0.046 257.417);
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px oklch(86.9% 0.022 252.894);
+  background-color: oklch(98.4% 0.003 247.858);
 }
