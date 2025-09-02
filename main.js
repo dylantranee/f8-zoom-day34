@@ -158,6 +158,56 @@ function TodoApp() {
   );
 }
 
+// Profile Card App
+
+function ProfileCard() {
+  const [user, setUser] = React.useState();
+
+  React.useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  return (
+    <main>
+      <div className="container">
+        <h1>Profile Card</h1>
+        {!user ? (
+          <div className="card">
+            <p>Loading...</p>
+          </div>
+        ) : (
+          <div className="card">
+            <p className="card-detail">
+              <span className="accent-text">Name:</span> {user.name}
+            </p>
+            <p className="card-detail">
+              <span className="accent-text">Username:</span> {user.username}
+            </p>
+            <p className="card-detail">
+              <span className="accent-text">Email:</span> {user.email}
+            </p>
+            <p className="card-detail">
+              <span className="accent-text">Phone:</span> {user.phone}
+            </p>
+            <p className="card-detail">
+              <span className="accent-text">Website: </span> {user.website}
+            </p>
+            <p className="card-detail">
+              <span className="accent-text">Address (street, city):</span>{" "}
+              {`${user.address.street}, ${user.address.city}`}
+            </p>
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+
 // Render
 
 const rootElement = document.querySelector("#root");
@@ -172,6 +222,9 @@ if (rootElement) {
       break;
     case "todo":
       app = <TodoApp />;
+      break;
+    case "profile":
+      app = <ProfileCard />;
       break;
     default:
       app = null;

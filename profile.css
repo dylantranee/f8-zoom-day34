@@ -1,0 +1,12 @@
+.accent-text {
+  font-weight: 600;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-detail {
+  text-align: start;
+}
